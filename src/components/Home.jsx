@@ -52,8 +52,8 @@ const Home = () => {
         >
           <img 
             src="/placeholder.svg?height=200&width=200" 
-            alt="John Doe" 
-            className="rounded-full w-48 h-48 mx-auto border-4 border-blue-500 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            alt="Muhammad Affan" 
+            className="rounded-full w-48 h-48 mx-auto border-4 border-fuchsia-500 shadow-lg hover:shadow-2xl transition-shadow duration-300"
           />
         </motion.div>
         <motion.h1 
@@ -62,13 +62,13 @@ const Home = () => {
           animate={controls}
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white text-shadow-lg"
         >
-          John Doe
+          Muhammad Affan
         </motion.h1>
         <motion.p 
           custom={1}
           initial={{ opacity: 0, y: -50 }}
           animate={controls}
-          className="text-xl md:text-2xl mb-4 text-blue-300 font-semibold"
+          className="text-xl md:text-2xl mb-4 text-fuchsia-300 font-semibold"
         >
           <TypedText text="Web Developer | Designer | Creative Thinker" />
         </motion.p>
@@ -76,7 +76,7 @@ const Home = () => {
           custom={2}
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          className="text-base md:text-lg mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-base md:text-lg mb-8 text-cyan-300 max-w-2xl mx-auto leading-relaxed"
         >
           Passionate about creating beautiful, functional, and user-centered digital experiences. With 5+ years of experience in the field. Let's build something amazing together!
         </motion.p>
@@ -88,13 +88,13 @@ const Home = () => {
         >
           <Link 
             to="/portfolio" 
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+            className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
             View My Work
           </Link>
           <Link 
             to="/contact" 
-            className="bg-transparent hover:bg-blue-500 text-blue-300 hover:text-white font-bold py-3 px-8 rounded-full border-2 border-blue-500 hover:border-transparent transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+            className="bg-transparent hover:bg-cyan-500 text-cyan-300 hover:text-white font-bold py-3 px-8 rounded-full border-2 border-cyan-500 hover:border-transparent transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
             Get In Touch
           </Link>
@@ -112,10 +112,10 @@ const Home = () => {
               whileHover={{ 
                 scale: 1.05, 
                 boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-                backgroundColor: "rgba(59, 130, 246, 0.1)" 
+                backgroundColor: "rgba(255, 0, 255, 0.1)" 
               }}
             >
-              <FontAwesomeIcon icon={service.icon} size="2x" className="text-blue-400 mb-4" />
+              <FontAwesomeIcon icon={service.icon} size="2x" className="text-fuchsia-400 mb-4" />
               <h3 className="text-white text-lg font-semibold">{service.title}</h3>
             </motion.div>
           ))}

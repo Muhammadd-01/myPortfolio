@@ -54,7 +54,7 @@ const About = () => {
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2.5">
               <motion.div 
-                className="bg-blue-600 h-2.5 rounded-full"
+                className="bg-fuchsia-600 h-2.5 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${skill.level}%` }}
                 transition={{ duration: 1, delay: index * 0.1 }}
@@ -75,7 +75,7 @@ const About = () => {
             className="mb-4"
           >
             <h3 className="text-xl font-bold">{exp.title}</h3>
-            <p className="text-gray-400">{exp.company} | {exp.period}</p>
+            <p className="text-cyan-400">{exp.company} | {exp.period}</p>
             <p>{exp.description}</p>
           </motion.div>
         ))}
@@ -92,7 +92,7 @@ const About = () => {
             className="mb-4"
           >
             <h3 className="text-xl font-bold">{edu.degree}</h3>
-            <p className="text-gray-400">{edu.school} | {edu.period}</p>
+            <p className="text-cyan-400">{edu.school} | {edu.period}</p>
             <p>{edu.description}</p>
           </motion.div>
         ))}
@@ -124,12 +124,12 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="mb-6"
             >
-              <img src="/placeholder.svg?height=400&width=400" alt="John Doe" className="rounded-full w-64 h-64 mx-auto border-4 border-blue-500 shadow-lg" />
+              <img src="/placeholder.svg?height=400&width=400" alt="Muhammad Affan" className="rounded-full w-64 h-64 mx-auto border-4 border-fuchsia-500 shadow-lg" />
             </motion.div>
-            <p className="text-base md:text-lg mb-4 text-gray-300">
-              Hi, I'm John Doe. I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With over 5 years of experience in the field, I've had the opportunity to work on a wide range of projects, from small business websites to large-scale web applications.
+            <p className="text-base md:text-lg mb-4 text-cyan-300">
+              Hi, I'm Muhammad Affan. I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With over 5 years of experience in the field, I've had the opportunity to work on a wide range of projects, from small business websites to large-scale web applications.
             </p>
-            <p className="text-base md:text-lg text-gray-300">
+            <p className="text-base md:text-lg text-cyan-300">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while brainstorming my next big idea. I believe in continuous learning and am always excited to take on new challenges in the ever-evolving world of web development.
             </p>
           </motion.div>
@@ -143,7 +143,7 @@ const About = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`flex-1 py-2 px-4 ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} capitalize transition-colors duration-300`}
+                  className={`flex-1 py-2 px-4 ${activeTab === tab ? 'bg-fuchsia-500 text-white' : 'bg-gray-700 text-gray-300'} capitalize transition-colors duration-300`}
                 >
                   {tab}
                 </button>
@@ -169,9 +169,9 @@ const About = () => {
           className="mt-12 text-center"
         >
           <a 
-            href="/john-doe-resume.pdf" 
+            href="/muhammad-affan-resume.pdf" 
             download 
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block transition-colors duration-300"
+            className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-bold py-2 px-4 rounded inline-block transition-colors duration-300"
           >
             Download Resume
           </a>
