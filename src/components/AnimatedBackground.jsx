@@ -15,7 +15,7 @@ const AnimatedBackground = () => {
         fullScreen: { enable: true },
         background: {
           color: {
-            value: "#0a2463", // Deep blue background
+            value: "#0047AB", // Striking cobalt blue background
           },
         },
         fpsLimit: 120,
@@ -46,10 +46,10 @@ const AnimatedBackground = () => {
             value: "#ffffff",
           },
           links: {
-            color: "#3e92cc", // Bright blue links
+            color: "#4169E1", // Royal blue links
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.7,
             width: 1,
           },
           collisions: {
@@ -62,7 +62,7 @@ const AnimatedBackground = () => {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 3,
             straight: false,
           },
           number: {
@@ -70,10 +70,10 @@ const AnimatedBackground = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100,
           },
           opacity: {
-            value: 0.5,
+            value: 0.7,
           },
           shape: {
             type: "circle",
