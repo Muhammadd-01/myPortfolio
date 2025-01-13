@@ -37,8 +37,9 @@ const Portfolio = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="container mx-auto py-12 px-4 relative min-h-screen bg-gradient-to-b from-gray-900 to-blue-900">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <AnimatedBackground />
+      <div className="z-10 container mx-auto py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,6 +75,7 @@ const Portfolio = () => {
           ))}
         </AnimatePresence>
       </motion.div>
+      </div>
     </div>
   );
 };

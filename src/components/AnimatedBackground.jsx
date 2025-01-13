@@ -1,20 +1,21 @@
-import React from 'react';
-import Particles from 'react-tsparticles';
+import React, { useCallback } from 'react';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const AnimatedBackground = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
+  const particlesInit = useCallback(async engine => {
+    await loadFull(engine);
+  }, []);
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
+        fullScreen: { enable: true },
         background: {
           color: {
-            value: "transparent",
+            value: "#0d47a1",
           },
         },
         fpsLimit: 120,
@@ -83,7 +84,6 @@ const AnimatedBackground = () => {
         },
         detectRetina: true,
       }}
-      className="absolute inset-0"
     />
   );
 };
