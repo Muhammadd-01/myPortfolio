@@ -33,10 +33,6 @@ const Home = () => {
     }));
   }, [controls]);
 
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-
   const services = [
     { icon: faCode, title: 'Web Development' },
     { icon: faPaintBrush, title: 'UI/UX Design' },
@@ -45,9 +41,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-blue-900">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <AnimatedBackground />
-      <div className="z-10 text-center px-4 w-full max-w-4xl h-screen flex flex-col justify-center items-center">
+      <div className="z-10 text-center px-4 w-full max-w-4xl">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -64,7 +60,7 @@ const Home = () => {
           custom={0}
           initial={{ opacity: 0, y: -50 }}
           animate={controls}
-          className="text-5xl font-bold mb-4 text-white text-shadow-lg"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white text-shadow-lg"
         >
           John Doe
         </motion.h1>
@@ -72,7 +68,7 @@ const Home = () => {
           custom={1}
           initial={{ opacity: 0, y: -50 }}
           animate={controls}
-          className="text-2xl mb-4 text-blue-300 font-semibold"
+          className="text-xl md:text-2xl mb-4 text-blue-300 font-semibold"
         >
           <TypedText text="Web Developer | Designer | Creative Thinker" />
         </motion.p>
@@ -80,7 +76,7 @@ const Home = () => {
           custom={2}
           initial={{ opacity: 0, y: 50 }}
           animate={controls}
-          className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-base md:text-lg mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed"
         >
           Passionate about creating beautiful, functional, and user-centered digital experiences. With 5+ years of experience in the field. Let's build something amazing together!
         </motion.p>

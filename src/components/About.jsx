@@ -101,80 +101,82 @@ const About = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 px-4 relative min-h-screen bg-gradient-to-b from-gray-900 to-blue-900">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <AnimatedBackground />
-      <motion.h1 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-8 text-center text-white"
-      >
-        About Me
-      </motion.h1>
-      <div className="grid md:grid-cols-2 gap-12">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+      <div className="z-10 container mx-auto py-12 px-4">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center text-white"
         >
+          About Me
+        </motion.h1>
+        <div className="grid md:grid-cols-2 gap-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img src="/placeholder.svg?height=400&width=400" alt="John Doe" className="rounded-full w-64 h-64 mx-auto border-4 border-blue-500 shadow-lg" />
-          </motion.div>
-          <p className="text-lg mb-4 text-gray-300">
-            Hi, I'm John Doe. I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With over 5 years of experience in the field, I've had the opportunity to work on a wide range of projects, from small business websites to large-scale web applications.
-          </p>
-          <p className="text-lg text-gray-300">
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while brainstorming my next big idea. I believe in continuous learning and am always excited to take on new challenges in the ever-evolving world of web development.
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <div className="flex mb-4">
-            {['skills', 'experience', 'education'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`flex-1 py-2 px-4 ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} capitalize transition-colors duration-300`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-          <AnimatePresence mode="wait">
             <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
             >
-              {tabContent[activeTab]}
+              <img src="/placeholder.svg?height=400&width=400" alt="John Doe" className="rounded-full w-64 h-64 mx-auto border-4 border-blue-500 shadow-lg" />
             </motion.div>
-          </AnimatePresence>
+            <p className="text-base md:text-lg mb-4 text-gray-300">
+              Hi, I'm John Doe. I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. With over 5 years of experience in the field, I've had the opportunity to work on a wide range of projects, from small business websites to large-scale web applications.
+            </p>
+            <p className="text-base md:text-lg text-gray-300">
+              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while brainstorming my next big idea. I believe in continuous learning and am always excited to take on new challenges in the ever-evolving world of web development.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="flex mb-4">
+              {['skills', 'experience', 'education'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`flex-1 py-2 px-4 ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300'} capitalize transition-colors duration-300`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                {tabContent[activeTab]}
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-12 text-center"
+        >
+          <a 
+            href="/john-doe-resume.pdf" 
+            download 
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block transition-colors duration-300"
+          >
+            Download Resume
+          </a>
         </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-        className="mt-12 text-center"
-      >
-        <a 
-          href="/john-doe-resume.pdf" 
-          download 
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block transition-colors duration-300"
-        >
-          Download Resume
-        </a>
-      </motion.div>
     </div>
   );
 };

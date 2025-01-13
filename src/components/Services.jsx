@@ -12,7 +12,7 @@ const ServiceCard = ({ icon, title, description }) => {
       whileTap={{ scale: 0.95 }}
     >
       <FontAwesomeIcon icon={icon} size="3x" className="text-blue-500 mb-4" />
-      <h3 className="text-xl font-bold mb-2 text-white"> {title}</h3>
+      <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </motion.div>
   );
@@ -38,27 +38,29 @@ const Services = () => {
   ];
 
   return (
-    <div className="container mx-auto py-12 px-4 relative min-h-screen bg-gradient-to-b from-gray-900 to-blue-900">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <AnimatedBackground />
-      <motion.h1 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-12 text-center text-white"
-      >
-        My Services
-      </motion.h1>
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <motion.div
-            key={service.title}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <ServiceCard {...service} />
-          </motion.div>
-        ))}
+      <div className="z-10 container mx-auto py-12 px-4">
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-center text-white"
+        >
+          My Services
+        </motion.h1>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ServiceCard {...service} />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
